@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/vector-gratis/fondo-colorido-psicodelico-dibujado-mano_23-2149075812.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: darkblue;
+        }
+        .given {
+            background: lightblue;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .box {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: white;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+            background: #000;
+            color: #fff;
+            padding: 5px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JAVASCRIPT OPERATORS</h1>
+        <p class="given">GIVEN: If A = 24.18 and B = 7.18, compute for the following:</p>
+        
+        <div class="box-container">
+            <div class="box">
+                <h3>Arithmetic Operators</h3>
+                <p>Exponent: <span class="result" id="exp"></span></p>
+                <p>Mod: <span class="result" id="mod"></span></p>
+                <button onclick="arithmeticOperation()">Show Answer</button>
+            </div>
+            
+            <div class="box">
+                <h3>Comparison Operators</h3>
+                <p>Is 30.27 greater than 6.18? <span class="result" id="greater"></span></p>
+                <p>Is 30.27 equal to 6.18? <span class="result" id="equal"></span></p>
+                <button onclick="comparisonOperation()">Show Answer</button>
+            </div>
+            
+            <div class="box">
+                <h3>Logical Operators</h3>
+                <p>(A <= B) && (A >= B): <span class="result" id="logical1"></span></p>
+                <p>(A != B) || (A == B): <span class="result" id="logical2"></span></p>
+                <button onclick="logicalOperation()">Show Answer</button>
+            </div>
+        </div>
+        
+        <br>
+        <button onclick="window.location.reload()">Refresh</button>
+        
+        <div class="footer">
+            AY 2024-2025 | Nickel Andoy | 9-Section
+        </div>
+    </div>
+    
+    <script>
+        function arithmeticOperation() {
+            let A = 24.18, B = 7.18;
+            document.getElementById("exp").innerText = Math.pow(A, B).toFixed(2);
+            document.getElementById("mod").innerText = (A % B).toFixed(2);
+        }
+        
+        function comparisonOperation() {
+            document.getElementById("greater").innerText = (30.27 > 6.18);
+            document.getElementById("equal").innerText = (30.27 == 6.18);
+        }
+        
+        function logicalOperation() {
+            let A = 24.18, B = 7.18;
+            document.getElementById("logical1").innerText = (A <= B && A >= B);
+            document.getElementById("logical2").innerText = (A != B || A == B);
+        }
+    </script>
+</body>
+</html>
